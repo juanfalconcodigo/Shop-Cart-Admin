@@ -11,5 +11,9 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  changeValue(value: boolean) {
+    let me = this;
+    me.isCollapsed = value;
+  }
 
 }

@@ -1,37 +1,22 @@
 <nz-layout class="container-admin">
     <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
-        <div class="logo"></div>
-        <ul nz-menu nzTheme="dark" nzMode="inline">
-            <li nz-submenu nzTitle="Usuario" nzIcon="user">
-                <ul>
-                    <li nz-menu-item>Tom</li>
-                    <li nz-menu-item>Bill</li>
-                    <li nz-menu-item>Alex</li>
-                </ul>
-            </li>
-            <li nz-submenu nzTitle="Productos" nzIcon="user">
-                <ul>
-                    <li nz-menu-item>Crear producto</li>
-                    <li nz-menu-item>Lista de productos</li>
-                </ul>
-            </li>
-            <li nz-menu-item>
-                <i nz-icon nzType="file"></i>
-                <span>Logout</span>
-            </li>
-        </ul>
+        <admin-navbar [isCollapsed]="isCollapsed"></admin-navbar>
     </nz-sider>
     <nz-layout>
         <nz-header>
-            <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'" (click)="isCollapsed = !isCollapsed"></i>
+            <admin-header [isCollapsed]="isCollapsed" (emitCollapsed)="changeValue($event)"></admin-header>
         </nz-header>
         <nz-content>
             <nz-breadcrumb>
                 <nz-breadcrumb-item>User</nz-breadcrumb-item>
                 <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
             </nz-breadcrumb>
-            <div class="inner-content">Bill is a cat.</div>
+            <div class="inner-content">
+                <router-outlet></router-outlet>
+            </div>
         </nz-content>
-        <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+        <nz-footer>
+            <admin-footer></admin-footer>
+        </nz-footer>
     </nz-layout>
 </nz-layout>

@@ -1,0 +1,27 @@
+<nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <div class="logo">
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li nz-submenu nzTitle="Usuario" nzIcon="user">
+            <ul>
+                <li nz-menu-item [nzMatchRouter]="true" routerLinkActive="active">Mis datos</li>
+                <li nz-menu-item [nzMatchRouter]="true" routerLinkActive="active">Actualizar Datos</li>
+                <li nz-menu-item [nzMatchRouter]="true" routerLinkActive="active">Mis estadisticas</li>
+            </ul>
+        </li>
+        <li nz-submenu nzTitle="Productos" nzIcon="pie-chart">
+            <ul>
+                <li nz-menu-item [routerLink]="['product/create']" [nzMatchRouter]="true" routerLinkActive="active">
+                    Registrar producto
+                </li>
+                <li nz-menu-item [routerLink]="['product/list']" [nzMatchRouter]="true" routerLinkActive="active">
+                    Lista de productos
+                </li>
+            </ul>
+        </li>
+        <li nz-menu-item>
+            <i nz-icon nzType="logout"></i>
+            <span>Logout</span>
+        </li>
+    </ul>
+</nz-sider>

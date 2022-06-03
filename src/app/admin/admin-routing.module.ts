@@ -5,7 +5,13 @@ import { AdminComponent } from './admin.component';
 const routes: Routes = [
   {
     path:'',
-    component:AdminComponent
+    component:AdminComponent,
+    children:[
+      {
+        path:'product',
+        loadChildren:()=>import('src/app/admin/product/product.module').then((m)=>m.ProductModule)
+      }
+    ]
   }
 ];
 

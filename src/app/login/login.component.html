@@ -1,1 +1,41 @@
-<p>login works!</p>
+<div class="login-container">
+    <div class="login-container__image-content">
+        <img class="login-container__image" src="https://wallpapercave.com/wp/wc1696680.jpg" alt="Image market">
+    </div>
+    <div class="login-container__form-content">
+
+        <div>
+            <h1 class="login-container__form-title">Iniciar sesión:</h1>
+            <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="Porfavor ingrese su correo!">
+                        <nz-input-group nzPrefixIcon="mail">
+                            <input type="text" nz-input formControlName="email" placeholder="Correo" />
+                        </nz-input-group>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="Porfavor ingrese su contraseña!">
+                        <nz-input-group nzPrefixIcon="lock">
+                            <input type="password" nz-input formControlName="password" placeholder="Contraseña" />
+                        </nz-input-group>
+                    </nz-form-control>
+                </nz-form-item>
+                <!-- <div nz-row class="login-form-margin">
+                    <div nz-col [nzSpan]="12">
+                        <label nz-checkbox formControlName="remember">
+                      <span>Remember me</span>
+                    </label>
+                    </div>
+                    <div nz-col [nzSpan]="12">
+                        <a class="login-form-forgot">Forgot password</a>
+                    </div>
+                </div> -->
+                <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Ingresar</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

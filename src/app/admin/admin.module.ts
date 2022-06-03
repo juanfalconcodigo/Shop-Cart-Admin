@@ -7,6 +7,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AdminComponent
@@ -15,9 +16,8 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     CommonModule,
     AdminRoutingModule,
     NzLayoutModule,
-    NzIconModule,
     NzBreadCrumbModule,
-    NzMenuModule
+    SharedModule
   ]
 })
 export class AdminModule { }
