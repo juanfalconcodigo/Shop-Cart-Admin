@@ -1,1 +1,58 @@
-<p>view-create works!</p>
+<div class="content-form-product">
+    <h1 class="content-form-product__title">Registro de producto:</h1>
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()" novalidate autocomplete="off">
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="brand">Marca</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="La marca es requerida!">
+                <input nz-input [type]="'text'" formControlName="brand" id="brand" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="model">Modelo</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El modelo es requerido!">
+                <input nz-input type="text" formControlName="model" id="model" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="photo">Imagen</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="La imagen es requerida!">
+                <input nz-input type="text" formControlName="photo" id="photo" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="price">Precio</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El precio es reqierido!">
+                <nz-input-number [nzMin]="1" [nzStep]="1" formControlName="price"></nz-input-number>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="size">Talla</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="La talla es requerida!">
+                <nz-input-number [nzMin]="8" [nzStep]="1" formControlName="size"></nz-input-number>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="color">Color</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="El color el requerido!">
+                <input nz-input type="text" formControlName="color" id="color" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="description">Descripción</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="La descripción es requerida!">
+                <input nz-input type="text" formControlName="description" id="description" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="serie">Serie</nz-form-label>
+            <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="La serie es reqierida!">
+                <input nz-input type="text" formControlName="serie" id="serie" />
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control [nzSpan]="14" [nzOffset]="6">
+                <button nz-button nzType="primary">Registrar producto</button>
+            </nz-form-control>
+        </nz-form-item>
+    </form>
+</div>
