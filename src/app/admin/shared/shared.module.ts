@@ -8,6 +8,7 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { NzNotificationModule } from 'ng-zorro-antd/notification';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,14 @@ import { RouterModule } from '@angular/router';
     NzIconModule,
     NzBreadCrumbModule,
     NzMenuModule,
-    RouterModule
+    RouterModule,
+    NzNotificationModule
   ],
   exports:[
     NavbarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    NzNotificationModule
   ]
 })
 export class SharedModule { }

@@ -19,6 +19,13 @@
                 </li>
             </ul>
         </li>
+        <li nz-submenu nzTitle="Chat" nzIcon="wechat">
+            <ul>
+                <li nz-menu-item [routerLink]="['chat/admin']" [nzMatchRouter]="true" routerLinkActive="active">
+                    Administradores
+                </li>
+            </ul>
+        </li>
         <li nz-menu-item>
             <i nz-icon nzType="logout"></i>
             <span>Logout</span>

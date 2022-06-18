@@ -1,0 +1,37 @@
+<div class="chat-container">
+    <div class="chat-container__users">
+        <ul class="chat-container__users-list">
+            <li class="chat-container__users-item" *ngFor="let user of users">
+                <div class="chat-container__users-item-image">
+                    <nz-avatar [nzSize]="'large'" nzIcon="user"></nz-avatar>
+                </div>
+                <div class="chat-container__users-item-details">
+                    <p class="f-white">{{user.username}}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="chat-container__chat">
+        <div class="chat-container__chat-messages-content">
+            <ul class="chat-container__chat-messages" #list>
+                <li *ngFor="let message of messages" class="chat-container__chat-messages-item">
+                    <div class="chat-container__chat-messages-item-image">
+                        <nz-avatar [nzSize]="'large'" nzIcon="user"></nz-avatar>
+                    </div>
+                    <div class="chat-container__chat-messages-item-content">
+                        <p class="message">{{message.username}}: {{message.message}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="chat-container__chat-input-content">
+
+            <input type="text" [formControl]="messageFormControl" placeholder="Ingrese mensage...." style="outline:none;" (keyup.enter)="sendMessage()">
+            <button class="chat-container__chat-input-content-btn" (click)="sendMessage()">
+                <i nz-icon nzType="send" nzTheme="outline" style="font-size: 22px; color: white;"></i>
+            </button>
+
+
+        </div>
+    </div>
+</div>

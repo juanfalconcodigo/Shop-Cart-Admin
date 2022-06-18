@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       me.$subscriptionPostLogin = me._userService.postLogin(data).subscribe({
         next: (resp) => {
           console.log('[RESPONSE POST LOGIN]', resp);
+          localStorage.setItem('TOKEN',resp.token);
           me.router.navigate(['admin']);
         },
         error: (error) => {

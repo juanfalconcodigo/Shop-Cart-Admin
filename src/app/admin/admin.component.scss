@@ -9,7 +9,7 @@ nz-header {
 }
 
 nz-content {
-    margin: 0 16px;
+    margin: 0 0 0 16px;
 }
 
 nz-breadcrumb {
@@ -17,6 +17,6 @@ nz-breadcrumb {
 }
 
 .inner-content {
-    background: #fff;
+    /* background: #fff; */
     min-height: calc(100vh - 188px);
 }

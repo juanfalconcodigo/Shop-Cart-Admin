@@ -1,6 +1,8 @@
 nz-header {
     background: #fff;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .trigger {
@@ -13,4 +15,27 @@ nz-header {
 
 .trigger:hover {
     color: #1890ff;
+}
+
+.alert-new-message {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    color: black;
+}
+
+.active-message {
+    animation: animateNewMessage 2s infinite ease-in-out;
+}
+
+@keyframes animateNewMessage {
+    0% {
+        color: black;
+    }
+    50% {
+        color: #52c41a;
+    }
+    100% {
+        color: black;
+    }
 }

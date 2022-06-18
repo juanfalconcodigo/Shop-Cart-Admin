@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SecurityGuard } from 'src/app/core/security/security.guard';
 
 const routes: Routes = [
   {
@@ -8,7 +9,8 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    loadChildren: () => import('src/app/admin/admin.module').then((m) => m.AdminModule)
+    loadChildren: () => import('src/app/admin/admin.module').then((m) => m.AdminModule),
+    canActivate:[SecurityGuard]
   },
   {
     path: '', pathMatch: 'full', redirectTo: 'login'
